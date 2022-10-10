@@ -5,7 +5,7 @@ services:
       context: ./wetty
     entrypoint: yarn start --ssh-host kali --ssh-user ${USER_NAME} --ssh-pass ${USER_PASSWORD}  --base / --allow-iframe true
     ports:
-      - ${WETTY_PORT}:3000
+      - ${IP}:3000:3000
 
   kali:
     build:
